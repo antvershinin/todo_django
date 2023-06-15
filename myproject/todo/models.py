@@ -6,7 +6,7 @@ from datetime import datetime
 
 class Todo(models.Model):
     text = models.CharField(max_length=50)
-    is_active = models.BooleanField(default=False)
+    is_completed = models.BooleanField(default=False)
     added_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

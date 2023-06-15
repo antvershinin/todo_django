@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{% static "todo/style.css" %}" />
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo App</title>
+    </head>
+    <body>
+        <div class="app">
+            <h1>ToDo app</h1>
+            <form class="form">
+                <input class="input" placeholder="Enter your duty"></input>
+            </form>
+        <div class="filter">
+            <div class="button">
+                <input id="All" type="radio" value="All" name="filter" />
+                <label htmlFor="All">All</label>
+            </div>
+            <div class="button">
+                <input id="Active" type="radio" value="Active" name="filter" />
+                <label htmlFor="Active">Active</label>
+            </div>
+            <div class="button">
+                <input id="Completed" type="radio" value="Completed" name="filter" />
+                <label htmlFor="Completed">Completed</label>
+            </div>
+        </div>
+        {% block todos %}
+        {% endblock %}
+        </div>
+  </body>
+</html>
